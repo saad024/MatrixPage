@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <title>LifeScape Events</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <title>Title</title>
+    <link href="./css/style.css" type="text/css" rel="stylesheet">
+    <link href="./css/responsive.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <!--<script src="assets/javascript/javascript.js"></script>-->
+    <script>
+    $(function(){
+        var curDown = false,
+            curYPos = 0,
+            curXPos = 0;
+        $(window).mousemove(function(m){
+          if(curDown === true){
+        //    $('.containerfluid1').scrollTop($('.containerfluid1').scrollTop() + (curYPos - m.pageY)); 
+           $('.containerfluid1').scrollLeft($('.containerfluid1').scrollLeft() + (curXPos - m.pageX) );
+          }
+        });
+        
+        $('.containerfluid1').mousedown(function(m){
+          curDown = true;
+          curYPos = m.pageY;
+          curXPos = m.pageX;
+        });
+        
+        $('.containerfluid1').mouseup(function(){
+          curDown = false;
+        });
+      })
+    </script>
+</head>
+<body id="events">
+<!--================
+  section header
+=================-->
+<section class="header">
+    <div class="container p-0">
+        <div class="primary-container">
+            <div class="inner-container">
+                <div class="logo-container">
+                   <a href=""> <img src="./assets/images/logococa.png"></a>
+                    <div class="hamburger">
+                        <div id="nav-icon1" class="nav-icon1">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="secondry-container">
+                        <!-- <button class="btn-blue">Add Moment</button> -->
+                         <div class="dropdown-container header-btn">
+                            <div class="">
+                                <button class="btn-dropdown btn-blue btn-search " id="moment-btn">Add Moment</button>
+                                 <div class="moment">
+                                <div class="profile-main-wrapper btn-drop" id="moment">
+                                    <div class="middle-container">
+                                        <p>Add a <i class="fa fa-quote-left"></i> Moment</p>
+                                        <div class="input-container input-section">
+                                                <div class="input-area"><input type="text" placeholder="Enter Your Title"></div>
+                                            <div class="select-section">
+                                           
+                                           
+                                            <select name="" id="day">
+                                                <option value="0">1</option>
+                                                <option value="1">2</option>
+                                                <option value="2">3</option>
+                                                <option value="3">4</option>
+                                                <option value="4">5</option>
+                                                <option value="5">6</option>
+                                                <option value="6">7</option>
+                                                <option value="7">8</option>
+                                                <option value="8">9</option>
+                                                <option value="9">10</option>
+                                                <option value="10">11</option>
+                                                <option value="11">12</option>
+                                            </select>
+                                             <select name="" id="month">
+                                                <option value="0">1</option>
+                                                <option value="1">2</option>
+                                                <option value="2">3</option>
+                                                <option value="3">4</option>
+                                                <option value="4">5</option>
+                                                <option value="5">6</option>
+                                                <option value="6">7</option>
+                                                <option value="7">8</option>
+                                                <option value="8">9</option>
+                                                <option value="9">10</option>
+                                                <option value="10">11</option>
+                                                <option value="11">12</option>
+                                            </select>
+                                             <select name="" id="year">
+                                                 <option value="2018">2018</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2013">2013</option>
+                                                <option value="2012">2012</option>
+                                            </select>
+                                        </div>
+
+
+                                        </div>
+                                        <div class="file-upload-div">
+                                        <input type="file" class="file-upload">
+                                            <!--<img src="./assets/images/dragimage.PNG">-->
+                                        <div class="row" id="upload-inside-div">
+                                            <img src="assets/images/icon.svg">
+                                            <p><span>Drag & drop Photos or Videos here<br></span>Maximum file size allowed is 20MB for Photos<br>
+                                                and 100MB for Videos</p>
+                                        </div></div>
+
+                                        <textarea rows="4" cols="50" placeholder="Say something about the moment" class="popup-textarea" id="popup-textarea"></textarea>
+                                        <div class="place-search-div" id="place-search">
+                                            <input type="search" placeholder="Search for a place" class="placeSearch"><i class="fa fa-sort-down search-sort" ></i></div>
+                                        <div class="people-search-div" id="people-search">
+                                        <input type="search" placeholder="Search People" class="people-search"><i class="fa fa-search search-sort-two"></i> </div>
+                                        <div class="people-search-div" id="music-search">
+                                            <input type="search" placeholder="Search MediaNet Songs(s)" class="people-search"><i class="fa fa-search search-sort-two"></i> </div>
+                                        <div class="people-search-div" id="link-search">
+                                            <input type="search" placeholder="Enter or Pase Link (URL)" class="people-search"> </div>
+                                        <div class="btn-and-icon dropdown-icons">
+                                            <div>
+                                                
+                                                    <!--<span><a href="#"><i class="fa fa-file" id="file-click"></i></a>-->
+
+
+                                                          <span><a id="file-click" href="#"><?xml version="1.0" encoding="UTF-8"?>
+                                                              <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                            <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+                                                            <title>contract (1)</title>
+                                                            <desc>Created with Sketch.</desc>
+                                                            <g id="UI-C1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                <g id="Lifescape-Home-V2" transform="translate(-398.000000, -200.000000)" fill="#1D9BE3" fill-rule="nonzero">
+                                                                    <g id="contract-(1)" transform="translate(398.000000, 200.000000)">
+                                                                        <path d="M15.5872187,5.03521875 C15.0389375,4.48690625 14.1467812,4.4869375 13.5983125,5.03534375 C13.429625,5.2041875 12.3525937,6.28209375 12.1880625,6.44678125 L12.1880625,2.7320625 C12.1880625,2.3564375 12.0417812,2.0033125 11.7761563,1.73771875 L10.450375,0.411875 C10.1847812,0.14625 9.831625,0 9.456,0 L1.4068125,0 C0.63140625,0 0.0005625,0.63084375 0.0005625,1.40625 L0.0005625,14.59375 C0.0005625,15.3691562 0.63140625,16 1.4068125,16 L10.7818125,16 C11.5572187,16 12.1880625,15.3691562 12.1880625,14.59375 L12.1880625,10.4259687 L15.5871875,7.02396875 C16.1367812,6.47440625 16.1369062,5.58484375 15.5872187,5.03521875 Z M9.37559375,0.9375 C9.46415625,0.9375 9.6348125,0.92215625 9.78746875,1.07478125 L11.1132812,2.400625 C11.2620312,2.54940625 11.2505937,2.7124375 11.2505937,2.8125 L9.37559375,2.8125 L9.37559375,0.9375 Z M11.2505625,14.59375 C11.2505625,14.8522188 11.0403125,15.0625 10.7818125,15.0625 L1.4068125,15.0625 C1.14834375,15.0625 0.9380625,14.8522188 0.9380625,14.59375 L0.9380625,1.40625 C0.9380625,1.14778125 1.14834375,0.9375 1.4068125,0.9375 L8.4380625,0.9375 L8.4380625,3.28125 C8.4380625,3.540125 8.6479375,3.75 8.9068125,3.75 L11.2505625,3.75 L11.2505625,7.38509375 C11.2505625,7.38509375 9.867625,8.76921875 9.8675625,8.76925 L9.20496875,9.431875 C9.15353125,9.4833125 9.11471875,9.5460625 9.09171875,9.61509375 L8.42878125,11.6038437 C8.372625,11.7722812 8.41646875,11.958 8.54203125,12.0835313 C8.66775,12.20925 8.85353125,12.252875 9.02171875,12.1967813 L11.0104687,11.533875 C11.0795,11.510875 11.14225,11.4720938 11.1936875,11.420625 L11.2505625,11.36375 L11.2505625,14.59375 Z M10.1993125,9.76334375 L10.8622187,10.42625 L10.609,10.6794688 L9.61465625,11.0109063 L9.94609375,10.0165313 L10.1993125,9.76334375 Z M11.525,9.7631875 L10.8620937,9.10028125 C11.2150937,8.747 12.782875,7.177875 13.115375,6.84509375 L13.7782813,7.508 L11.525,9.7631875 Z M14.9241563,6.3611875 L14.4409375,6.8448125 L13.7780312,6.18190625 L14.2614063,5.698125 C14.4442813,5.51534375 14.7415938,5.515375 14.9243438,5.698125 C15.1070625,5.8809375 15.1080313,6.17728125 14.9241563,6.3611875 Z" id="Shape"></path>
+                                                                        <path d="M8.9068125,4.6875 L2.3443125,4.6875 C2.0854375,4.6875 1.8755625,4.897375 1.8755625,5.15625 C1.8755625,5.415125 2.0854375,5.625 2.3443125,5.625 L8.9068125,5.625 C9.1656875,5.625 9.3755625,5.415125 9.3755625,5.15625 C9.3755625,4.897375 9.1656875,4.6875 8.9068125,4.6875 Z" id="Shape"></path>
+                                                                        <path d="M7.0318125,6.5625 L2.3443125,6.5625 C2.0854375,6.5625 1.8755625,6.772375 1.8755625,7.03125 C1.8755625,7.290125 2.0854375,7.5 2.3443125,7.5 L7.0318125,7.5 C7.2906875,7.5 7.5005625,7.290125 7.5005625,7.03125 C7.5005625,6.772375 7.2906875,6.5625 7.0318125,6.5625 Z" id="Shape"></path>
+                                                                        <path d="M7.0318125,8.4375 L2.3443125,8.4375 C2.0854375,8.4375 1.8755625,8.647375 1.8755625,8.90625 C1.8755625,9.165125 2.0854375,9.375 2.3443125,9.375 L7.0318125,9.375 C7.2906875,9.375 7.5005625,9.165125 7.5005625,8.90625 C7.5005625,8.647375 7.2906875,8.4375 7.0318125,8.4375 Z" id="Shape"></path>
+                                                                        <path d="M7.0318125,10.3125 L2.3443125,10.3125 C2.0854375,10.3125 1.8755625,10.522375 1.8755625,10.78125 C1.8755625,11.040125 2.0854375,11.25 2.3443125,11.25 L7.0318125,11.25 C7.2906875,11.25 7.5005625,11.040125 7.5005625,10.78125 C7.5005625,10.522375 7.2906875,10.3125 7.0318125,10.3125 Z" id="Shape"></path>
+                                                                        <path d="M8.9068125,13.1875 L6.0943125,13.1875 C5.8354375,13.1875 5.6255625,13.397375 5.6255625,13.65625 C5.6255625,13.915125 5.8354375,14.125 6.0943125,14.125 L8.9068125,14.125 C9.1656875,14.125 9.3755625,13.915125 9.3755625,13.65625 C9.3755625,13.397375 9.1656875,13.1875 8.9068125,13.1875 Z" id="Shape"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg></a></span>
+
+
+
+
+                                                    <!--<span><a href="#"><i class="fa fa-map-marker" id="map-click"></i></a></span>-->
+
+                                                <span><a href="#" id="map-click"><?xml version="1.0" encoding="UTF-8"?>
+                                                    <svg width="12px" height="16px" viewBox="0 0 12 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+                                                        <title>placeholder (3)</title>
+                                                        <desc>Created with Sketch.</desc>
+                                                        <g id="UI-C1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="Lifescape-Home-V2" transform="translate(-442.000000, -200.000000)" fill="#1D9BE3" fill-rule="nonzero">
+                                                                <g id="placeholder-(3)" transform="translate(442.000000, 200.000000)">
+                                                                    <path d="M5.625,0 C2.523375,0 0,2.523375 0,5.625 C0,6.6729375 0.29028125,7.695625 0.83965625,8.582875 L5.3048125,15.7784062 C5.39034375,15.91625 5.54103125,16 5.70309375,16 C5.70434375,16 5.7055625,16 5.7068125,16 C5.87028125,15.9987188 6.02128125,15.912375 6.10525,15.772125 L10.4565937,8.506875 C10.9756563,7.638375 11.25,6.64184375 11.25,5.625 C11.25,2.523375 8.726625,0 5.625,0 Z M9.6520625,8.0255625 L5.696,14.6308125 L1.63646875,8.0889375 C1.1791875,7.3504375 0.93125,6.4984375 0.93125,5.625 C0.93125,3.0403125 3.0403125,0.93125 5.625,0.93125 C8.2096875,0.93125 10.315625,3.0403125 10.315625,5.625 C10.315625,6.47253125 10.0840312,7.30275 9.6520625,8.0255625 Z" id="Shape"></path>
+                                                                    <path d="M5.625,2.8125 C4.0741875,2.8125 2.8125,4.0741875 2.8125,5.625 C2.8125,7.16590625 4.05365625,8.4375 5.625,8.4375 C7.21571875,8.4375 8.4375,7.14896875 8.4375,5.625 C8.4375,4.0741875 7.1758125,2.8125 5.625,2.8125 Z M5.625,7.50625 C4.58571875,7.50625 3.74375,6.66146875 3.74375,5.625 C3.74375,4.591125 4.591125,3.74375 5.625,3.74375 C6.658875,3.74375 7.503125,4.591125 7.503125,5.625 C7.503125,6.64634375 6.68075,7.50625 5.625,7.50625 Z" id="Shape"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg></a></span>
+
+
+                                                    <!--<span><a href="#"><i class="fa fa-user" aria-hidden="true" id="user-click"></i></a></span>-->
+
+
+
+                                                <span><a id="user-click" href="#"><?xml version="1.0" encoding="UTF-8"?>
+                                                    <svg width="16px" height="15px" viewBox="0 0 16 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+                                                    <title>profile</title>
+                                                    <desc>Created with Sketch.</desc>
+                                                    <g id="UI-C1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                        <g id="Lifescape-Home-V2" transform="translate(-481.000000, -200.000000)" fill="#1D9BE3" fill-rule="nonzero">
+                                                            <g id="profile" transform="translate(481.000000, 200.000000)">
+                                                                <path d="M7.96567376,8.40777881 C10.3278298,8.40777881 12.243773,6.52474907 12.243773,4.2032342 C12.243773,1.88171933 10.3278014,0.011570632 7.96567376,0.011570632 C5.6035461,0.011570632 3.68757447,1.89460037 3.68757447,4.2032342 C3.68757447,6.51186803 5.60351773,8.40777881 7.96567376,8.40777881 Z M7.96567376,1.10785316 C9.69790071,1.10785316 11.1152057,2.50076208 11.1152057,4.2032342 C11.1152057,5.90570632 9.69790071,7.29858736 7.96567376,7.29858736 C6.23344681,7.29858736 4.81614184,5.90567844 4.81614184,4.20320632 C4.81614184,2.5007342 6.23341844,1.10785316 7.96567376,1.10785316 Z" id="Shape"></path>
+                                                                <path d="M0.564283688,14.9725372 L15.4195461,14.9725372 C15.7344965,14.9725372 15.9838298,14.7274907 15.9838298,14.4179554 C15.9838298,11.5160409 13.5823262,9.14291822 10.6165106,9.14291822 L5.36731915,9.14291822 C2.4146383,9.14291822 0,11.503132 0,14.4179554 C0,14.7274907 0.249333333,14.9725372 0.564283688,14.9725372 Z M5.36731915,10.2520818 L10.6165106,10.2520818 C12.7686809,10.2520818 14.5402837,11.8255762 14.8158865,13.8633457 L1.16794326,13.8633457 C1.44351773,11.8384851 3.21514894,10.2520818 5.36731915,10.2520818 Z" id="Shape"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg></i></a></span>
+
+
+
+
+
+                                                    <!--<span><a href="#"><i class="fa fa-music" id="music-click"></i></a></span>-->
+
+
+                                                <span><a href="#" id="music-click"><?xml version="1.0" encoding="UTF-8"?>
+                                                    <svg width="14px" height="16px" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+                                                        <title>musical-note (1)</title>
+                                                        <desc>Created with Sketch.</desc>
+                                                        <g id="UI-C1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="Lifescape-Home-V2" transform="translate(-525.000000, -200.000000)" fill="#1D9BE3" fill-rule="nonzero">
+                                                                <g id="musical-note-(1)" transform="translate(525.000000, 200.000000)">
+                                                                    <path d="M13.9953875,3.5185272 L13.9953875,0.45241841 C13.9953875,0.308485356 13.927174,0.171246862 13.8167332,0.0875648536 C13.7030441,0.00388284519 13.5568724,-0.0228953975 13.4236937,0.0206192469 L4.55919258,2.9227113 C4.37729002,2.98296234 4.25385615,3.15702092 4.25385615,3.35451046 L4.25385615,6.42396653 L4.25385615,6.42731381 L4.25385615,12.2950962 C3.78935499,11.9637155 3.19492343,11.7829623 2.57125754,11.7829623 C1.91186079,11.7829623 1.28494664,11.9871464 0.807452436,12.3553473 C0.294227378,12.7536736 0.0116287703,13.2925858 0.0116287703,13.8783598 C0.0116287703,14.4641339 0.294227378,15.003046 0.807452436,15.4013724 C1.28494664,15.7695732 1.90861253,15.9737573 2.57125754,15.9737573 C3.23390255,15.9737573 3.85756845,15.7695732 4.33506265,15.4013724 C4.8482877,15.003046 5.13088631,14.4641339 5.13088631,13.8783598 L5.13088631,6.75534728 L13.1183573,4.13777406 L13.1183573,9.37961506 C12.6538561,9.04823431 12.0594246,8.86748117 11.4357587,8.86748117 C10.7763619,8.86748117 10.1494478,9.07166527 9.6719536,9.43986611 C9.15872854,9.83819247 8.87612993,10.3771046 8.87612993,10.9628787 C8.87612993,11.5486527 9.15872854,12.0875649 9.6719536,12.4858912 C10.1494478,12.8540921 10.7731137,13.0582762 11.4357587,13.0582762 C12.0984037,13.0582762 12.7220696,12.8540921 13.1995638,12.4858912 C13.7127889,12.0875649 13.9953875,11.5486527 13.9953875,10.9628787 L13.9953875,3.52187448 C13.9953875,3.5185272 13.9953875,3.5185272 13.9953875,3.5185272 Z M2.57125754,15.0699916 C1.65849652,15.0699916 0.888658933,14.5243849 0.888658933,13.8783598 C0.888658933,13.2323347 1.65849652,12.686728 2.57125754,12.686728 C3.48401856,12.686728 4.25385615,13.2323347 4.25385615,13.8783598 C4.25385615,14.5277322 3.48401856,15.0699916 2.57125754,15.0699916 Z M5.13088631,5.80471967 L5.13088631,3.68254393 L13.1183573,1.06831799 L13.1183573,3.19049372 L5.13088631,5.80471967 Z M11.439007,12.1545105 C10.5262459,12.1545105 9.75640835,11.6089038 9.75640835,10.9628787 C9.75640835,10.3168536 10.5262459,9.77124686 11.439007,9.77124686 C12.351768,9.77124686 13.1216056,10.3168536 13.1216056,10.9628787 C13.1183573,11.6089038 12.3485197,12.1545105 11.439007,12.1545105 Z" id="Shape"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg></a></span>
+
+
+
+
+                                                    <!--<span><a href="#"><i class="fa fa-paperclip" id="clip-click" ></i></a></span>-->
+
+
+
+                                                <span><a href="#" id="clip-click"><?xml version="1.0" encoding="UTF-8"?>
+                                                    <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+                                            <title>unlink</title>
+                                            <desc>Created with Sketch.</desc>
+                                            <g id="UI-C1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="Lifescape-Home-V2" transform="translate(-568.000000, -200.000000)" fill="#1D9BE3" fill-rule="nonzero">
+                                                    <g id="unlink" transform="translate(568.000000, 200.000000)">
+                                                        <path d="M14.8866909,1.10574545 C13.4123636,-0.368581818 11.0132364,-0.368 9.53861818,1.10574545 L6.86458182,3.77978182 C6.63738182,4.00698182 6.63738182,4.37527273 6.86458182,4.60247273 C7.09178182,4.82967273 7.46007273,4.82967273 7.68727273,4.60247273 L10.3613091,1.92843636 C10.8532364,1.4368 11.5106909,1.16567273 12.2123636,1.16567273 C12.9143273,1.16567273 13.5717818,1.4368 14.0637091,1.92872727 C14.5556364,2.42065455 14.8267636,3.07810909 14.8267636,3.78007273 C14.8267636,4.48174545 14.5556364,5.1392 14.0637091,5.63112727 L10.5672727,9.12843636 C9.54618182,10.1489455 7.88538182,10.1489455 6.86429091,9.12843636 C6.63709091,8.90123636 6.2688,8.90123636 6.0416,9.12843636 C5.8144,9.35563636 5.8144,9.72421818 6.0416,9.95112727 C6.77876364,10.6882909 7.7472,11.0568727 8.71563636,11.0568727 C9.68407273,11.0568727 10.6525091,10.6882909 11.3896727,9.95112727 L14.8866909,6.45410909 C15.5985455,5.74254545 15.9906909,4.79272727 15.9906909,3.78007273 C15.9906909,2.76712727 15.5985455,1.8176 14.8866909,1.10574545 Z" id="Shape"></path>
+                                                        <path d="M7.89294545,11.8021818 L5.63025455,14.0648727 C5.13832727,14.5568 4.48087273,14.8279273 3.77890909,14.8279273 C3.07723636,14.8279273 2.41949091,14.5568 1.92756364,14.0648727 C0.906763636,13.0440727 0.906763636,11.3829818 1.92756364,10.3621818 L5.21890909,7.07083636 C5.71083636,6.5792 6.36829091,6.30807273 7.07025455,6.30807273 C7.77192727,6.30807273 8.42938182,6.5792 8.92130909,7.07083636 C9.14850909,7.29803636 9.5168,7.29803636 9.744,7.07083636 C9.9712,6.84363636 9.9712,6.47534545 9.744,6.24814545 C8.26996364,4.77410909 5.87083636,4.77381818 4.39592727,6.24814545 L1.10458182,9.53978182 C0.393018182,10.2513455 0.000872727273,11.2011636 0.000872727273,12.2138182 C0.000872727273,13.2261818 0.393018182,14.176 1.10487273,14.8875636 C1.81643636,15.5994182 2.76625455,15.9915636 3.77861818,15.9915636 C4.79127273,15.9915636 5.74109091,15.5994182 6.45265455,14.8875636 L8.71534545,12.6248727 C8.94254545,12.3976727 8.94254545,12.0293818 8.71534545,11.8021818 C8.48814545,11.5749818 8.12014545,11.5749818 7.89294545,11.8021818 Z" id="Shape"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                            </svg></a></span>
+                                               
+
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                     <div class="post-section">   
+                                               <div class="dropdown-container">
+                                                <div class="btn-click">
+                                                    <button class="btn-dropdown btn-transparent btn-padding" >
+                                                        <div class="angle-down closed" id="toggle">
+                                                            <a class=" btn-post1 border-add"><i class="fa fa-list-ul" aria-hidden="true"></i>Add <i class="fa fa-angle-down" aria-hidden="true"></i></a> 
+                                                        </div></button>
+                                                        <ul class="drop drop-area">
+                                                            <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i>Bottle & Can Design</a></li>
+                                                            <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i>Celebrities, Paparazzi, Movies & Coke</a></li>
+                                                            <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i>Coca Cola and Sports</a></li>
+                                                            <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i>Coca Cola Collectibles and Merchandise</a></li>
+                                                            <li><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i>Coca Cola Collectibles and Merchandise</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-container ">
+                                                <div class="btn-click">
+                                                    <button class="btn-dropdown btn-transparent btn-padding" >
+                                                        <div class="angle-down closed" id="toggle">
+                                                           <a class=" btn-post1"><i class="fa fa-globe" aria-hidden="true"></i>Public <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                        </div></button>
+                                                        <ul class="drop">
+                                                            <li><a href="#"><i class="fa fa-globe" aria-hidden="true"></i>Public </a></li>
+                                                            <li><a href="#"><i class="fa fa-user"></i>Friend Only</a></li>
+                                                            <li><a href="#"><i class="fa fa-lock"></i>Private</a></li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-container">
+                                                <div class="btn-click">
+                                                    <button class="btn-dropdown btn-transparent btn-padding" >
+                                                        <div class="angle-down closed" id="toggle">
+                                                            <a class=" btn-post1"><i class="fa fa-share-alt" aria-hidden="true"></i>Social <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                        </div></button>
+                                                        <ul class="drop">
+                                                            <li><a href="#"><i class="fa fa-facebook-square"></i>FaceBook </a></li>
+                                                            <li><a href="#"><i class="fa fa-linkedin"></i>linkedin</a></li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                        
+                                                
+                                                
+                                                <a href="" class=" btn-post btn-green">Post <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                            </div>
+                                </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    <div class="dropdown-container header-btn">
+                        <div class="btn-click">
+                            <button class="btn-dropdown btn-transparent" ><span>My LifeScape</span><i class="fa fa-angle-down"></i></button>
+                            <ul class="drop">
+                                <li><a href="about.html">About Me </a></li>
+                                <li><a href="hometwo.html">Recent Activity</a></li>
+                                <li><a href="lifescapetwo.html">Spectrum</a></li>
+                                <li><a href="matrixV3.html">Time Matrix</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-container header-btn">
+                        <div class="btn-click">
+                            <button class="btn-dropdown btn-transparent"><span>Library</span><i class="fa fa-angle-down"></i></button>
+                            <ul class="drop Library-drop">
+                                <li><a href="#">Media</a></li>
+                                <li><a href="#">People</a></li>
+                                <li><a href="#">Places</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dropdown-container header-btn">
+                        <div class="btn-click">
+                            <button class="btn-dropdown btn-transparent" ><span>Events</span><i class="fa fa-angle-down"></i></button>
+                            <ul class="drop">
+                                <li><a href="about.html">About Me </a></li>
+                                <li><a href="hometwo.html">Recent Activity</a></li>
+                                <li><a href="lifescapetwo.html">Spectrum</a></li>
+                                <li><a href="matrixV3.html">Time Matrix</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-section" id="profile-dropdown">
+                <ul>
+                    <li class="search"><div class="search-box">
+                        <input type="text" placeholder="Search for People, Places, or your moments" class="input">
+                        <div class="btn">
+                                <img src="./assets/images/magnifying-glass.png">
+                        </div>
+                     </div></li>
+                    <li>
+                         <div class="dropdown-container profile-btn">
+                            <div class="btn-click" id="btn-click">
+                                <button class="btn-dropdown border-btn bg-transparent"> 
+                                        <img src="./assets/images/bell.png">
+                                </button>
+                                <!-- <ul class="profile-view drop bell-icon">
+                                    <li> -->
+                                <div class="drop1" id="drop1">
+                                <div class="notification-section ">
+                                    <h3>Notifications</h3>
+                                    <div class="notification">
+                                        <div class="notification-box ">      
+                                            <div class="image-area">
+                                                <img src="./assets/images/thumb.jpg">
+                                            </div>
+                                            <div class="middle-area">
+                                                <div class="name-area">
+                                                    <h5>Ajay</h5>
+                                                    <p>Approved your friend request</p>
+                                                </div>
+                                            <div class="year">
+                                                    <p>8 months ago</p>
+                                            </div>
+                                            </div>
+                                                    
+                                        </div> 
+                                        <div class="notification">
+                                                <div class="notification-box ">      
+                                                    <div class="image-area">
+                                                        <img src="./assets/images/coca.png">
+                                                    </div>
+                                                    <div class="middle-area">
+                                                        <div class="name-area">
+                                                            <h5>Coca Cola</h5>
+                                                            <p>Your video is ready to view, you can watch it.</p>
+                                                        </div>
+                                                    <div class="year">
+                                                            <p>2 year ago</p>
+                                                    </div>
+                                                    </div>
+                                                            
+                                                </div>
+                                                <div class="notification">
+                                                        <div class="notification-box ">      
+                                                            <div class="image-area">
+                                                                <img src="./assets/images/coca.png">
+                                                            </div>
+                                                            <div class="middle-area">
+                                                                <div class="name-area">
+                                                                    <h5>Coca Cola</h5>
+                                                                    <p>Your video is ready to view, you can watch it.</p>
+                                                                </div>
+                                                            <div class="year">
+                                                                    <p>2 year ago</p>
+                                                            </div>
+                                                            </div>
+                                                                    
+                                                        </div>
+                                    <div class="notification">
+                                            <div class="notification-box ">      
+                                                <div class="image-area">
+                                                    <img src="./assets/images/coca.png">
+                                                </div>
+                                                <div class="middle-area">
+                                                    <div class="name-area">
+                                                        <h5>Coca Cola</h5>
+                                                        <p>Your video is ready to view, you can watch it.</p>
+                                                    </div>
+                                                <div class="year">
+                                                        <p>2 year ago</p>
+                                                </div>
+                                                </div>
+                                                        
+                                            </div>
+                                            <div class="notification">
+                                                    <div class="notification-box ">      
+                                                        <div class="image-area">
+                                                            <img src="./assets/images/coca.png">
+                                                        </div>
+                                                        <div class="middle-area">
+                                                            <div class="name-area">
+                                                                <h5>Coca Cola</h5>
+                                                                <p>Your video is ready to view, you can watch it.</p>
+                                                            </div>
+                                                        <div class="year">
+                                                                <p>2 year ago</p>
+                                                        </div>
+                                                        </div>
+                                                                
+                                                    </div>
+                                                    <div class="notification">
+                                                            <div class="notification-box ">      
+                                                                <p class="see-all"><a href="#">See all</a></p>
+                                                                        
+                                                        </div>
+                                             </div>
+                                    
+                                          </div>
+                                          </div>
+                                    <!-- </li>
+                                    
+                                </ul> -->
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown-container profile-btn">
+                            <div class="btn-click">
+                                <button class="btn-dropdown border-btn bg-transparent"> 
+                                   <div class="rounded-image">
+                                     <img src="./assets/images/men.jpg">
+                                   </div>
+                                   <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="profile-view drop">
+                                    <li><a href="#">Profile </a></li>
+                                        <li><a href="">Account Settings</a></li>
+                                        <li><a href=""> Invite Friends</a></li>
+                                    <li class="right-border"><a href="#">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================
+  section-img
+=================-->
+<!-- <section class="section-img1">
+    <div class="container">
+        <div class="img-wrapper">
+            <div>
+                <img src="assets/images/dummy1.png">
+                <div class="opt-container">
+                    <h1>john Doe</h1>
+                    <h4>San Fransisco, CA</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!-- Section Add New Channel -->
+<section id="black_sub_header">
+    <div class="container">
+        <div class="channel-wrapper">
+            <div class="col-md-6">
+                <div class="button-div-left">
+                    <div class="btn-div">
+                        <button class="btn-blue-left">Add New Channel</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="search-div-right">
+                    <div>
+                <div class="search-container">
+                    <input type="text" name="" placeholder="Search Moment"><i class="fa fa-search"></i>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</section>
+<section>
+    <div class="container-fluid ">
+        <div class="col-md-3 containerfluid">
+            <div class="event-names">
+                <div class="event-box">
+                    <div class="main_wrapper">
+                        <p class="event_head">Event Name</p>
+                        <p class="event_text">21 Moments</p>
+                    </div>
+                    <div class="three-dots">
+                        <i class="fa fa-ellipsis-v"></i> 
+                    </div>
+                     <hr class="event-white">
+                </div>
+                <div class="event-box">
+                    <div class="main_wrapper">
+                        <p class="event_head">Event Name</p>
+                        <p class="event_text">21 Moments</p>
+                    </div>
+                    <div class="three-dots">
+                        <i class="fa fa-ellipsis-v"></i> 
+                    </div>
+                     <hr class="event-white">
+                </div>
+                <div class="event-box">
+                    <div class="main_wrapper">
+                        <p class="event_head">Event Name</p>
+                        <p class="event_text">21 Moments</p>
+                    </div>
+                    <div class="three-dots">
+                       <span><i class="fa fa-ellipsis-v popup-dots" id="profile-dot""></i></span> 
+                    </div>
+                     <hr class="event-white">
+                </div>
+                <div class="event-box">
+                    <div class="main_wrapper">
+                        <p class="event_head">Event Name</p>
+                        <p class="event_text">21 Moments</p>
+                    </div>
+                    <div class="three-dots">
+                        <i class="fa fa-ellipsis-v"></i> 
+                    </div>
+                     <hr class="event-white">
+                </div>
+                <div class="event-box">
+                    <div class="main_wrapper">
+                        <p class="event_head">Event Name</p>
+                        <p class="event_text">21 Moments</p>
+                    </div>
+                    <div class="three-dots">
+                        <i class="fa fa-ellipsis-v"></i> 
+                    </div>
+                     <hr class="event-white">
+                </div>
+                <div class="event-box">
+                    <div class="main_wrapper">
+                        <p class="event_head">Event Name</p>
+                        <p class="event_text">21 Moments</p>
+                    </div>
+                    <div class="three-dots">
+                        <i class="fa fa-ellipsis-v"></i> 
+                    </div>
+                     <hr class="event-white">
+                </div>
+                <div class="event-box">
+                    <div class="main_wrapper">
+                        <p class="event_head">Event Name</p>
+                        <p class="event_text">21 Moments</p>
+                    </div>
+                    <div class="three-dots">
+                        <i class="fa fa-ellipsis-v"></i> 
+                    </div>
+                     <hr class="event-white">
+                </div>
+            </div>
+            <div class="container_fluid"></div>
+            </div>
+            <div class="containerfluid1">
+                <div class="main-right">
+                    <div class="cards-box">
+                        <div class="cards-row">
+                            <div class="cardz">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                        </div>
+                        <div class="cards-row">
+                            <div class="cardz3">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                            <div class="cardz">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                            <div class="cardz2">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                        </div>
+                        <div class="cards-row">
+                        </div>
+                        <div class="cards-row">
+                            <div class="cardz3">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                        </div>
+                        <div class="cards-row">
+                            <div class="cardz2">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                            <div class="cardz1">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                            <div class="cardz3">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                        </div>
+                        <div class="cards-row">
+                        </div>
+                        <div class="cards-row">
+                            <div class="cardz4">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                            <div class="cardz1">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="cards-box">
+                        <div class="cards-row">
+                            <div class="cardz3">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                            <div class="cardz2">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                        </div>
+                        <div class="cards-row">
+                        </div>
+                        <div class="cards-row">
+                            <div class="cardz">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                        </div>
+                        <div class="cards-row">
+                            <div class="cardz3">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                            <div class="cardz4">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                        </div>
+                        <div class="cards-row">
+                        </div>
+                        <div class="cards-row">
+                            <div class="cardz2">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                            <div class="cardz">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                            <div class="cardz1">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                        </div>
+                         <div class="cards-row">
+                            <div class="cardz3">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                            <div class="cardz2">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards-box">
+                        <div class="cards-row">
+                            <div class="cardz4">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                            <div class="cardz3">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                            <div class="cardz2">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                        </div>
+                        <div class="cards-row">
+                            <div class="cardz1">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                        </div>
+                        <div class="cards-row">
+                        </div>
+                        <div class="cards-row">
+                            <div class="cardz">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                            <div class="cardz3">
+                                <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                            </div>
+                        <div class="cardz1">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                        </div>
+                        <div class="cards-row">
+                            <div class="cardz2">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                    </div>
+                    <div class="cards-row">
+                    </div>
+                    <div class="cards-row">
+                        <div class="cardz">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                        <div class="cardz4">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                        <div class="cardz2">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-box">
+                    <div class="cards-row">
+                    </div>
+                    <div class="cards-row">
+                        <div class="cardz1">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                        <div class="cardz">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                        <div class="cardz2">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                    </div>
+                     <div class="cards-row">
+                        <div class="cardz3">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                        <div class="cardz">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                    </div>
+                    <div class="cards-row">
+                    </div>
+                    <div class="cards-row">
+                        <div class="cardz2">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                        <div class="cardz3">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                        <div class="cardz4">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                    </div>
+                     <div class="cards-row">
+                        <div class="cardz">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                        <div class="cardz1">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                    </div>
+                     <div class="cards-row">
+                    </div>
+                </div>
+                <div class="cards-box">
+                    <div class="cards-row">
+                        <div class="cardz2">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                        <div class="cardz3">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                    </div>
+                    <div class="cards-row">
+                    </div>
+                    <div class="cards-row">
+                        <div class="cardz">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                    </div>
+                    <div class="cards-row">
+                        <div class="cardz1">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                        <div class="cardz4">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                    </div>
+                    <div class="cards-row">
+                    </div>
+                    <div class="cards-row">
+                        <div class="cardz3">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                        <div class="cardz2">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                        <div class="cardz3">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                    </div>
+                     <div class="cards-row">
+                        <div class="cardz4">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                        <div class="cardz">
+                            <div class="icon-event"><img src="assets/images/dummy.png" id="icon-event"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-bottom">
+                <div class="time_container">
+                    <p class="time_format">1:00PM - 2:00PM</p>
+                </div>
+                <div class="time_container">
+                    <p class="time_format">2:00PM - 4:00PM</p>
+                </div>
+                <div class="time_container">
+                    <p class="time_format">4:00PM - 6:00PM</p>
+                </div>
+                <div class="time_container">
+                    <p class="time_format">6:00PM - 8:00PM</p>
+                </div>
+                <div class="time_container">
+                    <p class="time_format">8:00PM - 9:00PM</p>
+                </div>
+            </div>
+        </div>
+</section>
+</body>
+</html>
