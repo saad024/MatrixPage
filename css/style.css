@@ -3538,15 +3538,15 @@ position: absolute;
 .main_wrapper{
         display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding-top: 28px;
-    padding-right: 21%;
+    padding-right: 0%;
 }
 .event-box1{
     height: 71px;
 }
 .event_head{
-        font-size: 14px;
+        font-size: 12px;
     color: white;
     /* padding: 0px; */
     padding-bottom: 0px;
@@ -3556,6 +3556,8 @@ position: absolute;
         font-size: 13px;
         font-weight: 100;
         color: white;
+        opacity: 0.5;
+        margin-left: 50px;
 }
 .three-dots{
     
@@ -3591,12 +3593,24 @@ position: absolute;
     margin-left: 0px;
    margin-top: 30px;
 }
+.margin10{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.moveicon{
+    color: white;    transform: rotate(44deg);margin-right: 20px;
+    visibility: hidden;
+}
+.event-box:hover .moveicon{
+        visibility: visible;;
+}
 .containerfluid {
     padding-right: 0px;
     padding-left: 0px;
     margin-right: 0px;
-    margin-left: -15px;
+    margin-left: 0px;
 }
+
 .container_fluid {
     padding-right: 0px;
     padding-left: 0px;
@@ -3612,8 +3626,9 @@ position: absolute;
     margin-right: 0px;
     margin-left: 0px;
     overflow-x: hidden;
-    cursor: ew-resize;
+    cursor: move;
 }
+
 .main-right{
     display: flex;
     margin-right: -15px;
@@ -3628,7 +3643,7 @@ position: absolute;
     display: flex;
     width: 100%;
     border: 1px solid #D4D4D4;
-    height: 101px;
+    height: 108px;
     border-bottom: none;
         padding-right: 5px;
     
@@ -3720,3 +3735,137 @@ position: absolute;
 ====================
    Events Page Css Ends
    =====================*/
+
+   .dropdownonelipsis1 li{
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    color: #000;
+    padding: 5px 10px;
+    background: #fff;
+    font-size: 13px;
+}
+.dropdownonelipsis1{
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 0 2px 0 #dcd6d6;
+    position: absolute;
+    left: 67%;
+    text-align: left;
+    background: white;
+        width: 100px;
+    margin-top: -14px;display: none;
+}
+.dropdownonelipsis2 li{
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    color: #000;
+    padding: 5px 10px;
+    background: #fff;
+    font-size: 13px;
+}
+.dropdownonelipsis2{
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 0 2px 0 #dcd6d6;
+    position: absolute;
+    left: 67%;
+    text-align: left;
+    background: white;
+        width: 100px;
+    margin-top: -14px;display: none;
+}
+.dropdownonelipsis3 li{
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    color: #000;
+    padding: 5px 10px;
+    background: #fff;
+    font-size: 13px;
+}
+.dropdownonelipsis3{
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 0 2px 0 #dcd6d6;
+    position: absolute;
+    left: 67%;
+    text-align: left;
+    background: white;
+        width: 100px;
+    margin-top: -14px;display: none;
+}
+.dropdownonelipsis4 li{
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    color: #000;
+    padding: 5px 10px;
+    background: #fff;
+    font-size: 13px;
+}
+.dropdownonelipsis4{
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 0 2px 0 #dcd6d6;
+    position: absolute;
+    left: 67%;
+    text-align: left;
+    background: white;
+        width: 100px;
+    margin-top: -14px;display: none;
+}
+.dropdownonelipsis5 li{
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    color: #000;
+    padding: 5px 10px;
+    background: #fff;
+    font-size: 13px;
+}
+.dropdownonelipsis5{
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 0 2px 0 #dcd6d6;
+    position: absolute;
+    left: 67%;
+    text-align: left;
+    background: white;
+        width: 100px;
+    margin-top: -14px;display: none;
+}
+.dropdownonelipsis6 li{
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    color: #000;
+    padding: 5px 10px;
+    background: #fff;
+    font-size: 13px;
+}
+.dropdownonelipsis6{
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 0 2px 0 #dcd6d6;
+    position: absolute;
+    left: 67%;
+    text-align: left;
+    background: white;
+        width: 100px;
+    margin-top: -14px;display: none;
+}
+.dropdownonelipsis7 li{
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    color: #000;
+    padding: 5px 10px;
+    background: #fff;
+    font-size: 13px;
+}
+.dropdownonelipsis7{
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 0 2px 0 #dcd6d6;
+    position: absolute;
+    left: 67%;
+    text-align: left;
+    background: white;
+        width: 100px;
+    margin-top: -14px;display: none;
+}
